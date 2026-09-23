@@ -25,7 +25,7 @@ function CaseCard({
         </a>
       </div>
       <div>
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center">
           <h3 className="text-h6 mt-2 mb-[0.2rem] font-bold uppercase">
             {title}
           </h3>
@@ -33,9 +33,9 @@ function CaseCard({
             {String(number).padStart(2, '0')}
           </span>
         </div>
-        <div className="caseDesc flex justify-between">
+        <div className="caseDesc flex justify-between items-end">
           <p className="caseLabel">{label}</p>
-          <p className="year">{year}</p>
+          <p className="text-xs opacity-50">{year}</p>
         </div>
       </div>
     </article>
