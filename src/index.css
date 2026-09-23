@@ -143,6 +143,7 @@ h6 {
 .customCursor.is-hovering {
   width: 4rem;
   height: 4rem;
+  border-radius: 0;
   background-color: transparent;
   border-color: var(--color-orange);
 }
