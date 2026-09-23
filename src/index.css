@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* -------------------------------------------------- */
 
@@ -7,14 +7,14 @@
 /* -------------------------------------------------- */
 
 @font-face {
-  font-family: "Rammetto One";
-  src: url("./assets/fonts/RammettoOne.ttf") format("truetype");
+  font-family: 'Rammetto One';
+  src: url('./assets/fonts/RammettoOne.ttf') format('truetype');
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Open Sans";
-  src: url("./assets/fonts/OpenSans.ttf") format("truetype");
+  font-family: 'Open Sans';
+  src: url('./assets/fonts/OpenSans.ttf') format('truetype');
   font-weight: 300 800;
   font-stretch: 75% 100%;
   font-style: normal;
@@ -30,8 +30,8 @@
 @theme {
   /* Fonts */
 
-  --font-heading: "Rammetto One", sans-serif;
-  --font-body: "Open Sans", sans-serif;
+  --font-heading: 'Rammetto One', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
 
   /* Colors */
 
@@ -42,9 +42,12 @@
   --color-blue: #207fe5;
   --color-green: #44b460;
 
+  --color-background: var(--theme-background);
+  --color-foreground: var(--theme-foreground);
+
   /* Font sizes */
 
-  --text-h1: clamp(3rem, 10vw, 13.75rem);
+  --text-h1: clamp(2.3rem, 10vw, 13.75rem);
   --text-h2: clamp(1.5rem, 8vw, 5rem);
   --text-h3: clamp(1.5rem, 4vw, 3rem);
   --text-h4: clamp(1.25rem, 3vw, 2rem);
@@ -53,9 +56,21 @@
 
   /* Spacing */
 
-  --spacing-section: 6rem;
+  --spacing-section: 5rem;
   --spacing-inline: 2.5rem;
   --spacing-inline-small: 2rem;
+}
+
+:root {
+  --color-background: var(--color-light);
+  --color-foreground: var(--color-dark);
+}
+
+/* Dark theme */
+
+html[data-theme='dark'] {
+  --color-background: var(--color-dark);
+  --color-foreground: var(--color-light);
 }
 
 /* -------------------------------------------------- */
@@ -63,11 +78,24 @@
 /* Global                                             */
 
 /* -------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
   font-family: var(--font-body);
   font-size: 1rem;
+}
+
+html,
+body,
+a,
+button,
+input,
+textarea,
+select {
+  cursor: none;
 }
 
 h1 {
@@ -102,10 +130,18 @@ h6 {
   font-size: var(--text-h6);
 }
 
-html {
-  scroll-behavior: smooth;
+.customCursor {
+  transition:
+    width 0.2s ease,
+    height 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+  border: 2px solid transparent;
 }
 
-body {
-  margin: 0;
+.customCursor.is-hovering {
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  border-color: var(--color-orange);
 }

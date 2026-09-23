@@ -1,0 +1,25 @@
+function SunIcon() {
+  return (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 27 27"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M13.0496 20.25C17.0261 20.25 20.2496 17.0265 20.2496 13.05C20.2496 9.07356 17.0261 5.85001 13.0496 5.85001C9.07316 5.85001 5.84961 9.07356 5.84961 13.05C5.84961 17.0265 9.07316 20.25 13.0496 20.25Z"
+        stroke="currentColor"
+        stroke-width="2.1"
+      />
+      <path
+        d="M13.0498 1.05V2.25M13.0498 23.85V25.05M25.0498 13.05H23.8498M2.2498 13.05H1.0498M21.5338 4.566L21.0634 5.0376M5.0362 21.0636L4.5646 21.5352M21.5338 21.534L21.0634 21.0624M5.0362 5.0364L4.5646 4.5648"
+        stroke="currentColor"
+        strokeWidth="2.1"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+export default SunIcon;
