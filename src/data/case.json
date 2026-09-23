@@ -1,0 +1,58 @@
+[
+  {
+    "title": "The Temple of Five",
+    "label": "Game development | Frontend",
+    "year": "2026",
+    "image": "/images/case-2.jpg",
+    "alt": "Projektbild för spelet The Temple of Five",
+    "url": "https://lollolicense.github.io/The-Temple-of-Five/"
+  },
+  {
+    "title": "Bookmark",
+    "label": "Fullstack | REST API | MongoDB",
+    "year": "2026",
+    "image": "/images/case-6.png",
+    "alt": "Projektbild för Bookmark",
+    "url": "https://bookmark-omega-ten.vercel.app/"
+  },
+  {
+    "title": "Duly",
+    "label": "Fullstack | REST API | MySQL",
+    "year": "2026",
+    "image": "/images/case-7.jpg",
+    "alt": "Projektbild för Todo appen - what todo now!?",
+    "url": "https://lollolicense.github.io/what-todo-now/"
+  },
+  {
+    "title": "Ikapp",
+    "label": "App design | UX/UI",
+    "year": "2026",
+    "image": "/images/case-3.jpg",
+    "alt": "Projektbild för appen Ikapp",
+    "url": "https://lollolicense.github.io/Ikapp/"
+  },
+  {
+    "title": "Lo's Donut Dispensary",
+    "label": "E-commerce | Frontend | UI",
+    "year": "2026",
+    "image": "/images/case-1.jpg",
+    "alt": "Projektbild för Lo's Donut Dispensary",
+    "url": "https://lollolicense.github.io/Lo-s-Donut-Dispensary/"
+  },
+  {
+    "title": "Folded",
+    "label": "Visual identity | Web design",
+    "year": "2025",
+    "image": "/images/case-4.jpg",
+    "alt": "Projektbild för Folded",
+    "url": "https://lollolicense.github.io/Folded/"
+  },
+  {
+    "title": "Smile & Wave",
+    "label": "Web development | UX",
+    "year": "2024",
+    "image": "/images/case-5.jpg",
+    "alt": "Projektbild för Smile & Wave",
+    "url": "https://lollolicense.github.io/Smile-Wave/"
+  }
+]

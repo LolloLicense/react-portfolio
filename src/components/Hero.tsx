@@ -2,7 +2,7 @@ import CvIcon from './icons/CvIcon';
 
 function Hero() {
   return (
-    <section className="font-heading ml-8 mt-8 gap-2 flex items-start justify-between md:ml-16 md:mt-10  lg:ml-28 lg:mt-12">
+    <section className="font-heading ml-8 mt-8 gap-2 flex items-start justify-between md:ml-14 md:mt-22  lg:ml-28 lg:mt-16">
       <div>
         <h1 className="text-h1 leading-none">Louise</h1>
         <p className="text-h2">Sverktsröm</p>
