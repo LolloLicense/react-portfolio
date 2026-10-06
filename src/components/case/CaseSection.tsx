@@ -20,7 +20,7 @@ function CaseSection() {
           </h2>
 
           <span className="text-sm font-bold md:mt-3 md:[writing-mode:vertical-rl]">
-            {String(cases.length).padStart(2, '0')}
+            {String(filteredCases.length).padStart(2, '0')}
           </span>
         </div>
 
