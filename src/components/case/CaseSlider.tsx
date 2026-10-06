@@ -1,19 +1,32 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Keyboard } from 'swiper/modules';
 import 'swiper/css';
-
-import cases from '../../data/case.json';
 import CaseCard from './CaseCard';
+import type { Case } from '../../types/case';
 
-function CaseSlider() {
+type CaseSliderProps = {
+  cases: Case[];
+};
+
+function CaseSlider({ cases }: CaseSliderProps) {
   return (
     <Swiper
       modules={[Keyboard]}
-      slidesPerView={3}
+      slidesPerView={1}
       spaceBetween={16}
       keyboard={{
         enabled: true,
         onlyInViewport: true,
+      }}
+      breakpoints={{
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 16,
+        },
       }}
     >
       {cases.map((caseItem, index) => (
