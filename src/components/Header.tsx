@@ -9,7 +9,7 @@ type HeaderProps = {
 
 function Header({ nav }: HeaderProps) {
   return (
-    <nav className="py-4 md:py-6">
+    <nav className="py-4 md:py-6 text-foreground">
       <ul className="flex gap-6 md:gap-8 uppercase font-black justify-between">
         <li>
           <a href="#case" className="text-foreground hover:text-orange">
