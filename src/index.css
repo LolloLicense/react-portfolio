@@ -36,7 +36,7 @@
   /* Colors */
 
   --color-dark: #202221;
-  --color-light: #ecf5f1;
+  --color-light: #f8f8f8;
   --color-grey: #5f5c5c;
   --color-orange: #f25832;
   --color-blue: #207fe5;
@@ -78,11 +78,14 @@ html[data-theme='dark'] {
 /* Global                                             */
 
 /* -------------------------------------------------- */
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   margin: 0;
   font-family: var(--font-body);
   font-size: 1rem;
@@ -146,4 +149,34 @@ h6 {
   border-radius: 0;
   background-color: transparent;
   border-color: var(--color-orange);
+}
+
+/* SKILLS */
+
+@keyframes skills-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.skills-scroll-left {
+  animation: skills-scroll-left 60s linear infinite;
+}
+
+@keyframes skills-scroll-right {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.skills-scroll-right {
+  animation: skills-scroll-right 60s linear infinite;
 }

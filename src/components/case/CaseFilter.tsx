@@ -22,7 +22,7 @@ function CaseFilter({ cases, selectedTags, setSelectedTags }: CaseFilterProps) {
         onClick={() => setSelectedTags([])}
         className={`${
           selectedTags.length === 0 ? 'bg-blue' : 'bg-dark'
-        } p-3 rounded-lg`}
+        } p-3 rounded-2xl`}
       >
         All
       </button>
@@ -30,7 +30,7 @@ function CaseFilter({ cases, selectedTags, setSelectedTags }: CaseFilterProps) {
         <button
           onClick={() => handleTagClick(tag)}
           key={tag}
-          className={`${selectedTags.includes(tag) ? 'bg-blue' : 'bg-dark'} p-3 rounded-lg`}
+          className={`${selectedTags.includes(tag) ? 'bg-blue' : 'bg-dark'} p-3 rounded-2xl`}
         >
           {tag}
         </button>
