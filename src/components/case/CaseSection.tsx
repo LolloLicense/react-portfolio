@@ -1,7 +1,7 @@
 import CaseSlider from './CaseSlider';
 import CaseFilter from './CaseFilter';
 import { useState } from 'react';
-import cases from '../../data/case.json';
+import cases from './case.json';
 
 function CaseSection() {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
