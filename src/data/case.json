@@ -1,7 +1,7 @@
 [
   {
     "title": "The Temple of Five",
-    "label": "Game development | Frontend",
+    "label": "State management | Interactive UI",
     "tags": ["Frontend", "Game"],
     "year": "2026",
     "image": "/images/case-2.jpg",
@@ -10,7 +10,7 @@
   },
   {
     "title": "Bookmark",
-    "label": "Fullstack | REST API | MongoDB",
+    "label": "REST API | MongoDB | JWT auth",
     "tags": ["Fullstack", "App"],
     "year": "2026",
     "image": "/images/case-6.png",
@@ -19,7 +19,7 @@
   },
   {
     "title": "Duly",
-    "label": "Fullstack | REST API | MySQL",
+    "label": "REST API | Express | MySQL",
     "tags": ["Fullstack", "App"],
     "year": "2026",
     "image": "/images/case-7.jpg",
@@ -28,8 +28,8 @@
   },
   {
     "title": "Ikapp",
-    "label": "App design | UX/UI",
-    "tags": ["UX/UI", "App"],
+    "label": "State management | Data handling",
+    "tags": ["UX/UI", "App", "Frontend"],
     "year": "2026",
     "image": "/images/case-3.jpg",
     "alt": "Projektbild för appen Ikapp",
@@ -37,7 +37,7 @@
   },
   {
     "title": "Lo's Donut Dispensary",
-    "label": "E-commerce | Frontend | UI",
+    "label": "Cart | Checkout | Form validation",
     "tags": ["Frontend", "E-commerce"],
     "year": "2026",
     "image": "/images/case-1.jpg",
@@ -46,7 +46,7 @@
   },
   {
     "title": "Smile & Wave",
-    "label": "Web development | UX",
+    "label": "Branding | Responsive design",
     "tags": ["Frontend", "UX/UI"],
     "year": "2024",
     "image": "/images/case-5.jpg",
