@@ -6,6 +6,8 @@ import { eng } from './locales/eng';
 import { sv } from './locales/sv';
 import Hero from './components/Hero';
 import CaseSection from './components/case/CaseSection';
+import Skills from './components/skills/Skills';
+import Bingo from './components/bingo/Bingo';
 
 function App() {
   const [language, setLanguage] = useState<'sv' | 'eng'>('sv');
@@ -27,6 +29,8 @@ function App() {
       />
       <Hero />
       <CaseSection />
+      <Skills />
+      <Bingo />
     </>
   );
 }
