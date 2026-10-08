@@ -12,7 +12,7 @@ function CaseSlider({ cases }: CaseSliderProps) {
   return (
     <Swiper
       modules={[Keyboard]}
-      slidesPerView={1}
+      slidesPerView={1.15}
       spaceBetween={16}
       keyboard={{
         enabled: true,
@@ -20,11 +20,11 @@ function CaseSlider({ cases }: CaseSliderProps) {
       }}
       breakpoints={{
         640: {
-          slidesPerView: 2,
+          slidesPerView: 2.15,
           spaceBetween: 16,
         },
         1024: {
-          slidesPerView: 3,
+          slidesPerView: 3.15,
           spaceBetween: 16,
         },
       }}

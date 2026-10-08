@@ -14,12 +14,12 @@ function CaseSection() {
   return (
     <section className="ml-8 mt-16 md:ml-16 md:mt-22 lg:ml-28 lg:mt-28 text-foreground">
       <div className="flex flex-col md:flex-row gap-4">
-        <div className="flex md:flex-col items-end gap-3">
+        <div className="flex md:flex-col items-baseline md:items-end gap-3 md:mt-11">
           <h2 className="uppercase text-h2 md:[writing-mode:vertical-rl] leading-none whitespace-nowrap text-foreground">
             Case
           </h2>
 
-          <span className="text-sm font-bold md:mt-3 md:[writing-mode:vertical-rl]">
+          <span className="text-sm font-bold md:mt-3 md:mx-1">
             {String(filteredCases.length).padStart(2, '0')}
           </span>
         </div>
