@@ -5,18 +5,18 @@ function Hero() {
     <section className="text-foreground font-heading ml-8 mt-8 gap-2 flex items-start justify-between md:ml-14 md:mt-22  lg:ml-28 lg:mt-16">
       <div>
         <h1 className="text-h1 leading-none">Louise</h1>
-        <p className="text-h2">Sverktsröm</p>
+        <p className="text-h2 text-grey leading-none">Sverktsröm</p>
       </div>
-      <div className="flex gap-1">
-        <a
-          href=""
-          className="text-foreground flex items-center hover:text-orange"
-        >
-          <CvIcon className="w-6 md:w-16 lg:w-24 h-auto" />
-        </a>
-        <h2 className="text-h2 md:[writing-mode:vertical-rl] leading-none whitespace-nowrap">
+      <div className="flex flex-col items-center gap-1">
+        <h2 className="text-h2 [writing-mode:vertical-rl] leading-none whitespace-nowrap">
           CV
         </h2>
+        <a
+          href=""
+          className="w-14 h-14 shrink-0 bg-blue rounded-full flex items-center justify-center text-light hover:bg-orange"
+        >
+          <CvIcon className="w-4 h-4 rotate-45" />
+        </a>
       </div>
     </section>
   );
