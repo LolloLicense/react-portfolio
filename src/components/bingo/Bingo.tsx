@@ -1,13 +1,25 @@
-import bingoItems from './bingo.json';
 import { useEffect, useState } from 'react';
+import type { Locale } from '../../locales/sv';
+import {
+  getWinningCombinations,
+  checkForBingo,
+  shuffleItems,
+} from './bingoUtils';
+import BingoWin from './BingoWin';
 
-const shuffleItems = () => {
-  return [...bingoItems].sort(() => Math.random() - 0.5);
+type BingoProps = {
+  bingo: Locale['bingo'];
 };
-function Bingo() {
+
+function Bingo({ bingo }: BingoProps) {
+  // STATE
   const [isDesktop, setIsDesktop] = useState(false);
-  const [shuffledItems, setShuffleItems] = useState(shuffleItems);
+  const [shuffledIds, setShuffledIds] = useState(() =>
+    shuffleItems(bingo.items),
+  );
   const [selectedItems, setSelectedItems] = useState<number[]>([]);
+
+  //GAME ACTIONS
   const toggleItem = (id: number) => {
     setSelectedItems((prev) =>
       prev.includes(id)
@@ -17,11 +29,9 @@ function Bingo() {
   };
   const resetGame = () => {
     setSelectedItems([]);
-    setShuffleItems(shuffleItems());
+    setShuffledIds(shuffleItems(bingo.items));
   };
-  useEffect(() => {
-    console.log(selectedItems);
-  }, [selectedItems]);
+  // RESPONSIVE BOARD SIZE
   useEffect(() => {
     const mediaQuery = window.matchMedia('(min-width: 768px)');
     const handleChange = () => {
@@ -33,51 +43,20 @@ function Bingo() {
       mediaQuery.removeEventListener('change', handleChange);
     };
   }, []);
+  // BOARD ITEMS
+  const shuffledItems = shuffledIds
+    .map((id) => bingo.items.find((item) => item.id === id))
+    .filter((item) => item !== undefined);
   const visibleItems = isDesktop ? shuffledItems : shuffledItems.slice(0, 9);
+
+  // BINGO CHECK
   const boardSize = isDesktop ? 4 : 3;
-
-  const winningCombinations: number[][] = [];
-
-  // ROWS CHECK
-  for (let row = 0; row < boardSize; row++) {
-    const currentRow: number[] = [];
-
-    for (let col = 0; col < boardSize; col++) {
-      currentRow.push(row * boardSize + col);
-    }
-    winningCombinations.push(currentRow);
-  }
-  // COLS CHECK
-  for (let col = 0; col < boardSize; col++) {
-    const currentCol: number[] = [];
-
-    for (let row = 0; row < boardSize; row++) {
-      currentCol.push(row * boardSize + col);
-    }
-    winningCombinations.push(currentCol);
-  }
-
-  // DIAGANOL CHECK
-  const diagonal: number[] = [];
-  const reverseDiagonal: number[] = [];
-  for (let i = 0; i < boardSize; i++) {
-    diagonal.push(i * boardSize + i);
-    reverseDiagonal.push(i * boardSize + (boardSize - 1 - i));
-  }
-  winningCombinations.push(diagonal);
-  winningCombinations.push(reverseDiagonal);
-
-  // CHECK FOR BINGO
-  // Check if any of the winning combinations is complete
-  const hasBingo = winningCombinations.some((combination) => {
-    // Check if .every position in the combination is selected
-    return combination.every((index) => {
-      // Get the ID of the item at this position on the shuffled board
-      const itemId = visibleItems[index].id;
-      // Check if that item's ID exists in selectedItems
-      return selectedItems.includes(itemId);
-    });
-  });
+  const winningCombinations = getWinningCombinations(boardSize);
+  const hasBingo = checkForBingo(
+    winningCombinations,
+    visibleItems,
+    selectedItems,
+  );
 
   return (
     <>
@@ -104,32 +83,7 @@ function Bingo() {
               );
             })}
 
-            {hasBingo && (
-              <div className="absolute inset-0 z-50 flex items-center justify-center bg-background/80">
-                <div className="absolute bg-background rounded-2xl p-2 md:p-6 flex flex-col items-center gap-6 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                  <p className="text-green font-bold text-lg lg:text-3xl font-heading text-center uppercase max-w-50 lg:max-w-80">
-                    Kul <br />
-                    Du har fattat min vibe!
-                  </p>
-
-                  <div className="flex gap-2 lg:gap-4">
-                    <button
-                      className="shrink-0 whitespace-nowrap text-foreground font-bold bg-background border-foreground border-3 p-2 rounded-3xl"
-                      onClick={resetGame}
-                    >
-                      Spela igen
-                    </button>
-
-                    <a
-                      href="mailto:louise.sverkstrom@gmail.com"
-                      className="shrink-0 whitespace-nowrap text-background font-bold bg-foreground border-background border-3 p-2 rounded-3xl"
-                    >
-                      Kontakta mig
-                    </a>
-                  </div>
-                </div>
-              </div>
-            )}
+            {hasBingo && <BingoWin bingo={bingo} onReset={resetGame} />}
           </div>
         </div>
       </section>

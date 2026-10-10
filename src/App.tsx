@@ -30,7 +30,7 @@ function App() {
       <Hero />
       <CaseSection />
       <Skills />
-      <Bingo />
+      <Bingo bingo={text.bingo} />
     </>
   );
 }
