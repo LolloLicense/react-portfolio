@@ -1,10 +1,7 @@
+import type { Locale } from '../locales/sv';
+
 type HeaderProps = {
-  nav: {
-    case: string;
-    skills: string;
-    bingo: string;
-    contact: string;
-  };
+  nav: Locale['nav'];
 };
 
 function Header({ nav }: HeaderProps) {
