@@ -133,7 +133,7 @@ function CustomCursor() {
       {/* Orange cursor - delayed movement */}
       <div
         ref={cursorRef}
-        className="customCursor pointer-events-none fixed z-900 top-0 left-0 z-50 h-5 w-5 rounded-full bg-orange"
+        className="customCursor pointer-events-none fixed z-900 top-0 left-0 h-5 w-5 rounded-full bg-orange"
       />
     </>
   );
