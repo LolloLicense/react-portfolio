@@ -79,7 +79,6 @@ function Bingo() {
     });
   });
 
-  console.log('winningRows:', winningCombinations);
   return (
     <>
       <section className="ml-8 my-16 md:ml-16 md:mt-22 lg:ml-28 lg:mt-28 text-foreground">
@@ -88,23 +87,52 @@ function Bingo() {
             Lollo-Bingo
           </h2>
 
-          <div className="grid grid-cols-3 md:grid-cols-4 gap-1 md:gap-4 w-full">
+          <div className="relative grid grid-cols-3 md:grid-cols-4 gap-1 md:gap-4 w-full">
             {visibleItems.map((item) => {
               const isSelected = selectedItems.includes(item.id);
+
               return (
                 <button
                   onClick={() => toggleItem(item.id)}
-                  className={`border-3 lg:border-4 border-foreground px-1 min-h-20 min-w-22 text-sm rounded-2xl text-foreground font-bold ${isSelected ? 'border-green' : ''}`}
+                  className={`border-3 lg:border-4 border-foreground px-1 min-h-20 min-w-22 text-sm rounded-2xl text-foreground font-bold ${
+                    isSelected ? 'border-green' : ''
+                  }`}
                   key={item.id}
                 >
                   {item.text}
                 </button>
               );
             })}
+
+            {hasBingo && (
+              <div className="absolute inset-0 z-50 flex items-center justify-center bg-background/80">
+                <div className="absolute bg-background rounded-2xl p-2 md:p-6 flex flex-col items-center gap-6 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <p className="text-green font-bold text-lg lg:text-3xl font-heading text-center uppercase max-w-50 lg:max-w-80">
+                    Kul <br />
+                    Du har fattat min vibe!
+                  </p>
+
+                  <div className="flex gap-2 lg:gap-4">
+                    <button
+                      className="shrink-0 whitespace-nowrap text-foreground font-bold bg-background border-foreground border-3 p-2 rounded-3xl"
+                      onClick={resetGame}
+                    >
+                      Spela igen
+                    </button>
+
+                    <a
+                      href="mailto:louise.sverkstrom@gmail.com"
+                      className="shrink-0 whitespace-nowrap text-background font-bold bg-foreground border-background border-3 p-2 rounded-3xl"
+                    >
+                      Kontakta mig
+                    </a>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
-      <dialog></dialog>
     </>
   );
 }
