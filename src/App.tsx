@@ -8,6 +8,7 @@ import Hero from './components/Hero';
 import CaseSection from './components/case/CaseSection';
 import Skills from './components/skills/Skills';
 import Bingo from './components/bingo/Bingo';
+import ContactModal from './components/contact/ContactModal';
 
 function App() {
   const [language, setLanguage] = useState<'sv' | 'eng'>('sv');
@@ -16,7 +17,7 @@ function App() {
     document.documentElement.dataset.theme = theme;
   }, [theme]);
   const text = language === 'sv' ? sv : eng;
-
+  const [isContactOpen, setIsContactOpen] = useState(false);
   return (
     <>
       <CustomCursor />
@@ -30,7 +31,12 @@ function App() {
       <Hero />
       <CaseSection />
       <Skills />
-      <Bingo bingo={text.bingo} />
+      <Bingo bingo={text.bingo} onContactClick={() => setIsContactOpen(true)} />
+      <ContactModal
+        isOpen={isContactOpen}
+        contact={text.contact}
+        onClose={() => setIsContactOpen(false)}
+      />
     </>
   );
 }

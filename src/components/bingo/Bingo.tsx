@@ -9,9 +9,10 @@ import BingoWin from './BingoWin';
 
 type BingoProps = {
   bingo: Locale['bingo'];
+  onContactClick: () => void;
 };
 
-function Bingo({ bingo }: BingoProps) {
+function Bingo({ bingo, onContactClick }: BingoProps) {
   // STATE
   const [isDesktop, setIsDesktop] = useState(false);
   const [shuffledIds, setShuffledIds] = useState(() =>
@@ -83,7 +84,13 @@ function Bingo({ bingo }: BingoProps) {
               );
             })}
 
-            {hasBingo && <BingoWin bingo={bingo} onReset={resetGame} />}
+            {hasBingo && (
+              <BingoWin
+                bingo={bingo}
+                onReset={resetGame}
+                onContactClick={onContactClick}
+              />
+            )}
           </div>
         </div>
       </section>

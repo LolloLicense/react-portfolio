@@ -94,11 +94,39 @@ export const eng = {
     ],
   },
   contact: {
-    title: 'Contact',
+    close: 'Close',
+    title: 'Say Hey!',
+    text: 'Got a project, an idea, or just something fun to share?',
     name: 'Name',
     email: 'E-mail',
+    phone: 'Phone',
     message: 'Message',
     send: 'Send',
+
+    subject: 'Vibe?',
+    subjects: {
+      business: 'Workstuff',
+      plotTwist: 'Randome',
+    },
+
+    placeholders: {
+      name: 'Your name',
+      email: 'you@email.com',
+      phone: '+46 70 123 45 67',
+      message: 'Write a message...',
+    },
+
+    errors: {
+      name: 'Give me at least two letters to work with.',
+      email: "Hmm, that email address doesn't look quite right.",
+      phone: 'I need a phone number too.',
+      subject: 'Pick a vibe first.',
+      message: 'You forgot the actual message.',
+    },
+    success: {
+      title: 'Thanks!',
+      text: "You've officially made my inbox a little more fun. The ball's in my court now, I'll get back to you soon.",
+    },
   },
 };
 export type Locale = typeof eng;

@@ -81,11 +81,38 @@ export const sv = {
     ],
   },
   contact: {
-    title: 'Kontakt',
+    close: 'Stäng',
+    title: 'Säg hej!',
+    text: 'Har du ett projekt, en idé eller bara något kul att berätta?',
     name: 'Namn',
     email: 'E-post',
+    phone: 'Telefon',
     message: 'Meddelande',
     send: 'Skicka',
+
+    subject: 'Vibe',
+    subjects: {
+      business: 'Jobbsnack',
+      plotTwist: 'Slumpmässigt',
+    },
+
+    placeholders: {
+      name: 'Ditt namn',
+      email: 'din@email.se',
+      phone: '070-123 45 67',
+      message: 'Skriv ett meddelande...',
+    },
+    errors: {
+      name: 'Jag behöver minst två bokstäver att jobba med.',
+      email: 'Hmm, den där mejladressen ser inte riktigt rätt ut.',
+      phone: 'Jag behöver ett telefonnummer också.',
+      subject: 'Välj en vibe först.',
+      message: 'Du glömde själva meddelandet.',
+    },
+    success: {
+      title: 'Tack!',
+      text: 'Du har officiellt gjort min inkorg lite roligare. Nu är bollen hos mig, återkommer inom kort.',
+    },
   },
 };
 export type Locale = typeof sv;
