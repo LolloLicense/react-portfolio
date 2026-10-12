@@ -27,6 +27,7 @@ function App() {
         setLanguage={setLanguage}
         theme={theme}
         setTheme={setTheme}
+        onContactClick={() => setIsContactOpen(true)}
       />
       <Hero />
       <CaseSection />

@@ -9,9 +9,16 @@ type AsideProps = {
   setLanguage: (language: 'sv' | 'eng') => void;
   theme: 'light' | 'dark';
   setTheme: (theme: 'light' | 'dark') => void;
+  onContactClick: () => void;
 };
 
-function Aside({ language, setLanguage, theme, setTheme }: AsideProps) {
+function Aside({
+  language,
+  setLanguage,
+  theme,
+  setTheme,
+  onContactClick,
+}: AsideProps) {
   const toggleLanguage = () => {
     setLanguage(language === 'sv' ? 'eng' : 'sv');
   };
@@ -26,13 +33,14 @@ function Aside({ language, setLanguage, theme, setTheme }: AsideProps) {
       <nav className="flex flex-col items-center gap-3">
         <ul className="flex flex-col gap-3">
           <li>
-            <a
-              href="mailto:louise.sverkstrom@gmail.com"
-              aria-label="Skicka e-post till Louise Sverkström"
+            <button
+              type="button"
+              onClick={onContactClick}
+              aria-label="Öppna kontaktformulär"
               className="text-background transition-colors hover:text-orange"
             >
               <MailIcon />
-            </a>
+            </button>
           </li>
           <li>
             <a
