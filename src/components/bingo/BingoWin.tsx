@@ -24,7 +24,7 @@ function BingoWin({ bingo, onReset }: BingoWinProps) {
 
           <a
             href="mailto:louise.sverkstrom@gmail.com"
-            className="shrink-0 whitespace-nowrap text-background font-bold bg-foreground border-background border-3 p-2 rounded-3xl"
+            className="shrink-0 whitespace-nowrap text-background font-bold bg-foreground p-2 rounded-3xl"
           >
             {bingo.contact}
           </a>
