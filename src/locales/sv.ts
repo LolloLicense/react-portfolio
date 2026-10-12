@@ -113,6 +113,13 @@ export const sv = {
       title: 'Tack!',
       text: 'Du har officiellt gjort min inkorg lite roligare. Nu är bollen hos mig, återkommer inom kort.',
     },
+
+    section: {
+      title: 'Kontakt',
+      intro: 'Har du något kul på g?',
+      text: 'Kanske vill du utveckla din webbplats, bygga något helt nytt eller få liv i en digital idé som legat och skvalpat lite för länge. Stort, litet, halvfärdigt eller än så länge bara en tanke. Jag är alltid nyfiken.',
+      button: 'Säg hej!?',
+    },
   },
 };
 export type Locale = typeof sv;

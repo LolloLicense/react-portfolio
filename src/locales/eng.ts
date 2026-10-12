@@ -127,6 +127,12 @@ export const eng = {
       title: 'Thanks!',
       text: "You've officially made my inbox a little more fun. The ball's in my court now, I'll get back to you soon.",
     },
+    section: {
+      title: 'Contact',
+      intro: 'Got something fun in the works?',
+      text: "Maybe your website needs some work, you're building something completely new, or you've got a digital idea that's been sitting around for a little too long. Big, small, half-finished or still just a thought. I'm always curious.",
+      button: 'Say hey!?',
+    },
   },
 };
 export type Locale = typeof eng;

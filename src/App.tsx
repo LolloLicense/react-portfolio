@@ -9,6 +9,7 @@ import CaseSection from './components/case/CaseSection';
 import Skills from './components/skills/Skills';
 import Bingo from './components/bingo/Bingo';
 import ContactModal from './components/contact/ContactModal';
+import Contact from './components/contact/Contact';
 
 function App() {
   const [language, setLanguage] = useState<'sv' | 'eng'>('sv');
@@ -33,6 +34,10 @@ function App() {
       <CaseSection />
       <Skills />
       <Bingo bingo={text.bingo} onContactClick={() => setIsContactOpen(true)} />
+      <Contact
+        contact={text.contact}
+        onContactClick={() => setIsContactOpen(true)}
+      />
       <ContactModal
         isOpen={isContactOpen}
         contact={text.contact}
