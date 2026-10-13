@@ -14,7 +14,7 @@ function Cv({ cv, onContactClick, onClose }: CvPorps) {
         type="button"
         onClick={onClose}
         aria-label="Close"
-        className="absolute top-6 right-6 z-60"
+        className="absolute top-6 right-6 z-60 text-foreground"
       >
         <CloseIcon />
       </button>
