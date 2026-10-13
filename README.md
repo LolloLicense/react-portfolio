@@ -4,7 +4,6 @@ A portfolio built from scratch with React and TypeScript, designed in Figma and 
 
 It brings together selected projects, my CV and a slightly unnecessary Lollo-Bingo.
 
-
 ![React](https://img.shields.io/badge/React-202221?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-202221?style=for-the-badge&logo=typescript&logoColor=3178C6)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-202221?style=for-the-badge&logo=tailwindcss&logoColor=06B6D4)
@@ -73,7 +72,6 @@ Some components also became quite large as the project grew. I therefore went ba
 I approached the assignment by rebuilding my existing portfolio rather than creating an entirely new concept. This gave me the opportunity to focus on translating an existing design and website into React and understanding the benefits of reusable components, state and a more modular structure.
 
 I used AI as a support during development, mainly for discussing solutions, understanding concepts and debugging problems. The implementation was developed and tested throughout the project rather than generated as a finished solution.
-
 
 ## That's it!
 

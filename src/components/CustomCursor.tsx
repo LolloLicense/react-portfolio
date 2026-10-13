@@ -127,13 +127,13 @@ function CustomCursor() {
       {/* Small dot - exact pointer position */}
       <div
         ref={dotRef}
-        className="pointer-events-none fixed z-999 top-0 left-0 h-2 w-2 rounded-full bg-pink-500"
+        className='pointer-events-none fixed z-999 top-0 left-0 h-2 w-2 rounded-full bg-pink-500'
       />
 
       {/* Orange cursor - delayed movement */}
       <div
         ref={cursorRef}
-        className="customCursor pointer-events-none fixed z-999 top-0 left-0 h-5 w-5 rounded-full bg-orange"
+        className='customCursor pointer-events-none fixed z-999 top-0 left-0 h-5 w-5 rounded-full bg-orange'
       />
     </>
   );

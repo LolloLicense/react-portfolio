@@ -63,20 +63,21 @@ function Bingo({ bingo, onContactClick }: BingoProps) {
   return (
     <>
       <section
-        id="bingo"
-        className="scroll-mt-12 ml-8 my-16 md:ml-16 md:mt-22 lg:ml-28 lg:mt-28 text-foreground"
+        id='bingo'
+        className='scroll-mt-12 ml-8 my-16 md:ml-16 md:mt-22 lg:ml-28 lg:mt-28 text-foreground'
       >
-        <div className="flex flex-col md:flex-row gap-4">
-          <h2 className="uppercase text-h2 md:[writing-mode:vertical-rl] leading-none whitespace-nowrap text-foreground">
+        <div className='flex flex-col md:flex-row gap-4'>
+          <h2 className='uppercase text-h2 md:[writing-mode:vertical-rl] leading-none whitespace-nowrap text-foreground'>
             Lollo-Bingo
           </h2>
 
-          <div className="relative grid grid-cols-3 md:grid-cols-4 gap-1 md:gap-4 w-full">
+          <div className='relative grid grid-cols-3 md:grid-cols-4 gap-1 md:gap-4 w-full'>
             {visibleItems.map((item) => {
               const isSelected = selectedItems.includes(item.id);
 
               return (
                 <button
+                  type='button'
                   onClick={() => toggleItem(item.id)}
                   className={`border-3 lg:border-4 border-foreground px-1 min-h-20 min-w-22 text-sm rounded-2xl text-foreground font-bold ${
                     isSelected ? 'border-green' : ''
