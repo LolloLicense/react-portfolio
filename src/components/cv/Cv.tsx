@@ -21,7 +21,7 @@ function Cv({ cv, onContactClick, onClose }: CvPorps) {
       <div className="w-full max-w-5xl mx-auto px-6">
         <header className="flex flex-wrap-reverse gap-2 items-start">
           <img
-            src="/images/imageCV.jpg"
+            src="/images/imageCV.webp"
             alt=""
             className="w-[50%] max-w-82 min-w-72 h-auto object-cover aspect-square"
           />

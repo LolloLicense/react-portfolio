@@ -18,6 +18,7 @@ function CaseFilter({ cases, selectedTags, setSelectedTags }: CaseFilterProps) {
   return (
     <div className="flex gap-2 flex-wrap mb-4 text-light font-bold leading-1">
       <button
+        type="button"
         onClick={() => setSelectedTags([])}
         className={`${
           selectedTags.length === 0 ? 'bg-blue' : 'bg-dark'
@@ -27,6 +28,7 @@ function CaseFilter({ cases, selectedTags, setSelectedTags }: CaseFilterProps) {
       </button>
       {allTags.map((tag) => (
         <button
+          type="button"
           onClick={() => handleTagClick(tag)}
           key={tag}
           className={`${selectedTags.includes(tag) ? 'bg-blue' : 'bg-dark'} p-3 rounded-2xl`}
