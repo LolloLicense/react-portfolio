@@ -61,7 +61,10 @@ function Bingo({ bingo, onContactClick }: BingoProps) {
 
   return (
     <>
-      <section className="ml-8 my-16 md:ml-16 md:mt-22 lg:ml-28 lg:mt-28 text-foreground">
+      <section
+        id="bingo"
+        className="scroll-mt-12 ml-8 my-16 md:ml-16 md:mt-22 lg:ml-28 lg:mt-28 text-foreground"
+      >
         <div className="flex flex-col md:flex-row gap-4">
           <h2 className="uppercase text-h2 md:[writing-mode:vertical-rl] leading-none whitespace-nowrap text-foreground">
             Lollo-Bingo

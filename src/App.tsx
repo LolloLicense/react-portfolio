@@ -10,6 +10,7 @@ import Skills from './components/skills/Skills';
 import Bingo from './components/bingo/Bingo';
 import ContactModal from './components/contact/ContactModal';
 import Contact from './components/contact/Contact';
+import CvModal from './components/cv/CvModal';
 
 function App() {
   const [language, setLanguage] = useState<'sv' | 'eng'>('sv');
@@ -19,6 +20,7 @@ function App() {
   }, [theme]);
   const text = language === 'sv' ? sv : eng;
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [isCvOpen, setIsCvOpen] = useState(false);
   return (
     <>
       <CustomCursor />
@@ -30,14 +32,26 @@ function App() {
         setTheme={setTheme}
         onContactClick={() => setIsContactOpen(true)}
       />
-      <Hero />
-      <CaseSection />
-      <Skills />
-      <Bingo bingo={text.bingo} onContactClick={() => setIsContactOpen(true)} />
-      <Contact
-        contact={text.contact}
-        onContactClick={() => setIsContactOpen(true)}
-      />
+      <main>
+        <Hero onCvClick={() => setIsCvOpen(true)} />
+        <CaseSection />
+        <Skills />
+        <Bingo
+          bingo={text.bingo}
+          onContactClick={() => setIsContactOpen(true)}
+        />
+        <Contact
+          contact={text.contact}
+          onContactClick={() => setIsContactOpen(true)}
+        />
+      </main>
+      {isCvOpen && (
+        <CvModal
+          cv={text.cv}
+          onContactClick={() => setIsContactOpen(true)}
+          onClose={() => setIsCvOpen(false)}
+        />
+      )}
       <ContactModal
         isOpen={isContactOpen}
         contact={text.contact}

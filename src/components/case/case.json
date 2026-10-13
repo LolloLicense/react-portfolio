@@ -4,7 +4,7 @@
     "label": "State management | Interactive UI",
     "tags": ["Frontend", "Game"],
     "year": "2026",
-    "image": "/images/case-2.jpg",
+    "image": "/images/case-2.webp",
     "alt": "Projektbild för spelet The Temple of Five",
     "url": "https://lollolicense.github.io/The-Temple-of-Five/"
   },
@@ -13,7 +13,7 @@
     "label": "REST API | MongoDB | JWT auth",
     "tags": ["Fullstack", "App"],
     "year": "2026",
-    "image": "/images/case-6.png",
+    "image": "/images/case-6.webp",
     "alt": "Projektbild för Bookmark",
     "url": "https://bookmark-omega-ten.vercel.app/"
   },
@@ -22,7 +22,7 @@
     "label": "REST API | Express | MySQL",
     "tags": ["Fullstack", "App"],
     "year": "2026",
-    "image": "/images/case-7.jpg",
+    "image": "/images/case-7.webp",
     "alt": "Projektbild för Todo appen - what todo now!?",
     "url": "https://lollolicense.github.io/what-todo-now/"
   },
@@ -31,7 +31,7 @@
     "label": "State management | Data handling",
     "tags": ["UX/UI", "App", "Frontend"],
     "year": "2026",
-    "image": "/images/case-3.jpg",
+    "image": "/images/case-3.webp",
     "alt": "Projektbild för appen Ikapp",
     "url": "https://lollolicense.github.io/Ikapp/"
   },
@@ -40,7 +40,7 @@
     "label": "Cart | Checkout | Form validation",
     "tags": ["Frontend", "E-commerce"],
     "year": "2026",
-    "image": "/images/case-1.jpg",
+    "image": "/images/case-1.webp",
     "alt": "Projektbild för Lo's Donut Dispensary",
     "url": "https://lollolicense.github.io/Lo-s-Donut-Dispensary/"
   },
@@ -49,7 +49,7 @@
     "label": "Branding | Responsive design",
     "tags": ["Frontend", "UX/UI"],
     "year": "2024",
-    "image": "/images/case-5.jpg",
+    "image": "/images/case-5.webp",
     "alt": "Projektbild för Smile & Wave",
     "url": "https://lollolicense.github.io/Smile-Wave/"
   }

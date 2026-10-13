@@ -21,7 +21,11 @@ function CaseCard({
     <article className="w-full">
       <div>
         <a href={url} target="_blank" rel="noopener noreferrer">
-          <img src={image} alt={alt} className="w-full h-auto" />
+          <img
+            src={image}
+            alt={alt}
+            className="w-full aspect-square object-cover"
+          />
         </a>
       </div>
       <div>

@@ -1,6 +1,10 @@
 import CvIcon from './icons/CvIcon';
 
-function Hero() {
+type HeroProps = {
+  onCvClick: () => void;
+};
+
+function Hero({ onCvClick }: HeroProps) {
   return (
     <section className="text-foreground font-heading ml-8 mt-8 gap-2 flex items-start justify-between md:ml-14 md:mt-22  lg:ml-28 lg:mt-16">
       <div>
@@ -11,12 +15,14 @@ function Hero() {
         <h2 className="text-h2 [writing-mode:vertical-rl] leading-none whitespace-nowrap">
           CV
         </h2>
-        <a
-          href=""
+        <button
+          type="button"
+          onClick={onCvClick}
+          aria-label="Öppna CV"
           className="w-14 h-14 shrink-0 bg-blue rounded-full flex items-center justify-center text-light hover:bg-orange"
         >
           <CvIcon className="w-4 h-4 rotate-45" />
-        </a>
+        </button>
       </div>
     </section>
   );

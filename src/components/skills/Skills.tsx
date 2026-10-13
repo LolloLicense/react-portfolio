@@ -45,7 +45,10 @@ const skillsRow2 = [
 
 function Skills() {
   return (
-    <section className="ml-8 mt-16 md:ml-16 md:mt-22 lg:ml-28 lg:mt-28 text-foreground">
+    <section
+      id="skills"
+      className="scroll-mt-12 ml-8 mt-16 md:ml-16 md:mt-22 lg:ml-28 lg:mt-28 text-foreground"
+    >
       <div className="flex flex-col md:flex-row gap-4 md:items-center">
         <h2 className="uppercase text-h2 md:[writing-mode:vertical-rl] leading-none whitespace-nowrap text-foreground">
           Skills
@@ -60,7 +63,10 @@ function Skills() {
                     key={skill.name}
                     className="flex flex-col items-center justify-center gap-2 w-28 h-28 md:w-30 md:h-36 lg:w-36 lg:h-36 shrink-0"
                   >
-                    <Icon className="md:w-18 md:h-18 w-12 h-12" />
+                    <Icon
+                      aria-hidden="true"
+                      className="md:w-18 md:h-18 w-12 h-12"
+                    />
                     <span className="text-xs font-bold uppercase">
                       {skill.name}
                     </span>
@@ -76,7 +82,10 @@ function Skills() {
                     key={`duplicate-${skill.name}`}
                     className="flex flex-col items-center justify-center gap-2 w-28 h-28 md:w-30 md:h-36 lg:w-36 lg:h-36 shrink-0"
                   >
-                    <Icon className="md:w-18 md:h-18 w-12 h-12" />
+                    <Icon
+                      aria-hidden="true"
+                      className="md:w-18 md:h-18 w-12 h-12"
+                    />
                     <span className="text-xs font-bold uppercase">
                       {skill.name}
                     </span>
@@ -94,7 +103,7 @@ function Skills() {
                     key={skill.name}
                     className="flex flex-col items-center justify-center gap-2 w-28 h-28 md:p-6 md:w-30 md:h-36 lg:w-36 lg:h-36 shrink-0"
                   >
-                    <Icon className="text-6xl" />
+                    <Icon aria-hidden="true" className="text-6xl" />
                     <span className="text-xs font-bold uppercase">
                       {skill.name}
                     </span>
@@ -110,7 +119,7 @@ function Skills() {
                     key={`duplicate-${skill.name}`}
                     className="flex flex-col items-center justify-center gap-2 w-28 h-28 md:p-6 md:w-30 md:h-36 lg:w-36 lg:h-36 shrink-0"
                   >
-                    <Icon className="text-6xl" />
+                    <Icon aria-hidden="true" className="text-6xl" />
                     <span className="text-xs font-bold uppercase">
                       {skill.name}
                     </span>

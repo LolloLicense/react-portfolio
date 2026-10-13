@@ -12,7 +12,10 @@ function CaseSection() {
           selectedTags.some((tag) => item.tags.includes(tag)),
         );
   return (
-    <section className="ml-8 mt-16 md:ml-16 md:mt-22 lg:ml-28 lg:mt-28 text-foreground">
+    <section
+      id="case"
+      className="scroll-mt-12 ml-8 mt-16 md:ml-16 md:mt-22 lg:ml-28 lg:mt-28 text-foreground"
+    >
       <div className="flex flex-col md:flex-row gap-4">
         <div className="flex md:flex-col items-baseline md:items-end gap-3 md:mt-11">
           <h2 className="uppercase text-h2 md:[writing-mode:vertical-rl] leading-none whitespace-nowrap text-foreground">

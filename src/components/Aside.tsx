@@ -57,6 +57,7 @@ function Aside({
             <a
               href="https://www.linkedin.com/in/louise-sverkstr%C3%B6m-208634271/"
               className="text-background transition-colors hover:text-orange"
+              aria-label="LinkedIn"
             >
               <LinkedIn />
             </a>
