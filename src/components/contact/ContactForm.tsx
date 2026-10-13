@@ -4,6 +4,7 @@ import ArrowIcon from '../icons/ArrowIcon';
 import ContactBg from './ContactBg';
 import { validateContactForm } from './contactValidation';
 import ContactSuccess from './ContactSuccess';
+import ContactError from './ContactError';
 import CloseIcon from '../icons/CloseIcon';
 
 type ContactFormProps = {
@@ -28,7 +29,11 @@ function ContactForm({ contact, onClose }: ContactFormProps) {
     message: '',
   });
 
-  const [isSuccess, setIsSuccess] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    'idle' | 'success' | 'error'
+  >('idle');
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -48,7 +53,7 @@ function ContactForm({ contact, onClose }: ContactFormProps) {
     }
   };
 
-  const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const validationErrors = validateContactForm(form, contact.errors);
@@ -60,11 +65,42 @@ function ContactForm({ contact, onClose }: ContactFormProps) {
 
     if (hasError) return;
 
-    setIsSuccess(true);
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('https://formspree.io/f/mnpjbeer', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(form),
+      });
+      if (response.ok) {
+        setSubmitStatus('success');
+      } else {
+        setSubmitStatus('error');
+      }
+      setIsSubmitting(false);
+    } catch {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
-  if (isSuccess) {
+  if (submitStatus === 'success') {
     return <ContactSuccess contact={contact} onClose={onClose} />;
+  }
+
+  if (submitStatus === 'error') {
+    return (
+      <ContactError
+        contact={contact}
+        onClose={onClose}
+        onRetry={() => setSubmitStatus('idle')}
+      />
+    );
   }
 
   return (
@@ -216,9 +252,10 @@ function ContactForm({ contact, onClose }: ContactFormProps) {
 
         <button
           type="submit"
-          className="shrink-0 whitespace-nowrap text-background font-bold bg-foreground py-2 px-4 rounded-3xl flex gap-6 items-center"
+          disabled={isSubmitting}
+          className="shrink-0 whitespace-nowrap uppercase text-background font-bold bg-foreground py-2 px-4 rounded-3xl flex gap-6 items-center"
         >
-          {contact.send}
+          {isSubmitting ? contact.sending : contact.send}
           <ArrowIcon />
         </button>
       </div>

@@ -9,8 +9,8 @@ type ContactSuccessProps = {
 
 function ContactSuccess({ contact, onClose }: ContactSuccessProps) {
   return (
-    <div className="relative my-24 w-full max-w-lg flex flex-col gap-4 text-foreground p-6 rounded-2xl border-3 border-green bg-background min-h-112.5 lg:min-h-162.5">
-      <ContactBg className="absolute bottom-0 left-0 w-full h-auto z-0 rounded-lg pointer-events-none text-green" />
+    <div className="relative my-24 w-full max-w-lg flex flex-col gap-4 text-foreground p-6 rounded-2xl border-3 border-foreground bg-background min-h-112.5 lg:min-h-162.5">
+      <ContactBg className="absolute bottom-0 left-0 w-full h-auto z-0 rounded-lg pointer-events-none text-green/50" />
       <button
         type="button"
         onClick={() => {

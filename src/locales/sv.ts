@@ -89,6 +89,7 @@ export const sv = {
     phone: 'Telefon',
     message: 'Meddelande',
     send: 'Skicka',
+    sending: 'Skickar...',
 
     subject: 'Vibe',
     subjects: {
@@ -108,6 +109,11 @@ export const sv = {
       phone: 'Jag behöver ett telefonnummer också.',
       subject: 'Välj en vibe först.',
       message: 'Du glömde själva meddelandet.',
+    },
+    submitError: {
+      title: 'OOPS!',
+      text: 'Det där gick inte riktigt som planerat.',
+      retry: 'Försök igen',
     },
     success: {
       title: 'Tack!',

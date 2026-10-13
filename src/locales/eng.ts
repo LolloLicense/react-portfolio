@@ -102,6 +102,7 @@ export const eng = {
     phone: 'Phone',
     message: 'Message',
     send: 'Send',
+    sending: 'Sending...',
 
     subject: 'Vibe?',
     subjects: {
@@ -122,6 +123,11 @@ export const eng = {
       phone: 'I need a phone number too.',
       subject: 'Pick a vibe first.',
       message: 'You forgot the actual message.',
+    },
+    submitError: {
+      title: 'OOPS!',
+      text: "That didn't quite go as planned.",
+      retry: 'Try again',
     },
     success: {
       title: 'Thanks!',
