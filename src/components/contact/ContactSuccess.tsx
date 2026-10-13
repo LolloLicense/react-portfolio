@@ -14,8 +14,6 @@ function ContactSuccess({ contact, onClose }: ContactSuccessProps) {
       <button
         type="button"
         onClick={() => {
-          console.log('CLOSE CLICK');
-
           onClose();
         }}
         aria-label={contact.close}

@@ -8,7 +8,6 @@ type CaseFilterProps = {
 
 function CaseFilter({ cases, selectedTags, setSelectedTags }: CaseFilterProps) {
   const allTags = [...new Set(cases.flatMap((item) => item.tags))];
-  console.log(allTags);
   const handleTagClick = (tag: string) => {
     if (selectedTags.includes(tag)) {
       setSelectedTags(selectedTags.filter((item) => item !== tag));
