@@ -11,6 +11,7 @@ import Bingo from './components/bingo/Bingo';
 import ContactModal from './components/contact/ContactModal';
 import Contact from './components/contact/Contact';
 import CvModal from './components/cv/CvModal';
+import { AnimatePresence } from 'motion/react';
 
 function App() {
   const [language, setLanguage] = useState<'sv' | 'eng'>('sv');
@@ -45,13 +46,15 @@ function App() {
           onContactClick={() => setIsContactOpen(true)}
         />
       </main>
-      {isCvOpen && (
-        <CvModal
-          cv={text.cv}
-          onContactClick={() => setIsContactOpen(true)}
-          onClose={() => setIsCvOpen(false)}
-        />
-      )}
+      <AnimatePresence>
+        {isCvOpen && (
+          <CvModal
+            cv={text.cv}
+            onContactClick={() => setIsContactOpen(true)}
+            onClose={() => setIsCvOpen(false)}
+          />
+        )}
+      </AnimatePresence>
       <ContactModal
         isOpen={isContactOpen}
         contact={text.contact}
