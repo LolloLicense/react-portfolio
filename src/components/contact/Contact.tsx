@@ -26,7 +26,7 @@ function Contact({ contact, onContactClick }: ContactProps) {
               onClick={() => {
                 onContactClick();
               }}
-              className="w-full max-w-sm whitespace-nowrap text-background font-bold bg-blue p-2 rounded-3xl uppercase hover:bg-orange"
+              className="w-full max-w-sm whitespace-nowrap text-light font-bold bg-blue p-2 rounded-3xl uppercase hover:bg-orange"
             >
               {contact.section.button}
             </button>

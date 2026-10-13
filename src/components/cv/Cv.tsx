@@ -30,7 +30,6 @@ function Cv({ cv, onContactClick, onClose }: CvPorps) {
             <span className="text-grey text-h2 font-heading leading-tight">
               Sverkström
             </span>
-            <p>{cv.role}</p>
           </div>
         </header>
         <div className="mainContent grid lg:grid-cols-2">
@@ -59,14 +58,14 @@ function Cv({ cv, onContactClick, onClose }: CvPorps) {
               <h3 className="font-heading text-title-cv text-grey">
                 {cv.about.title}
               </h3>
-              <p className="mt-6">{cv.about.text}</p>
+              <p className="mt-6 text-foreground">{cv.about.text}</p>
             </section>
             {/* INFO */}
             <section className="mt-8">
               <h3 className="font-heading text-title-cv text-grey">
                 {cv.info.title}
               </h3>
-              <ul className="flex flex-col gap-4 mt-6">
+              <ul className="flex flex-col gap-4 mt-6 text-foreground">
                 <li>{cv.info.drivingLicense}</li>
                 <li>{cv.info.languages}</li>
                 <li>{cv.info.references}</li>
