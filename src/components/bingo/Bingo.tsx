@@ -6,6 +6,7 @@ import {
   shuffleItems,
 } from './bingoUtils';
 import BingoWin from './BingoWin';
+import { AnimatePresence } from 'motion/react';
 
 type BingoProps = {
   bingo: Locale['bingo'];
@@ -86,14 +87,15 @@ function Bingo({ bingo, onContactClick }: BingoProps) {
                 </button>
               );
             })}
-
-            {hasBingo && (
-              <BingoWin
-                bingo={bingo}
-                onReset={resetGame}
-                onContactClick={onContactClick}
-              />
-            )}
+            <AnimatePresence>
+              {hasBingo && (
+                <BingoWin
+                  bingo={bingo}
+                  onReset={resetGame}
+                  onContactClick={onContactClick}
+                />
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </section>
