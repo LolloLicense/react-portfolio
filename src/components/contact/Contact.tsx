@@ -18,8 +18,8 @@ function Contact({ contact, onContactClick }: ContactProps) {
         <div className="flex flex-1 md:justify-between gap-4">
           <div className="flex flex-col md:justify-between gap-6">
             <div className="flex flex-col gap-4">
-              <p>{contact.section.intro}</p>
-              <p className="max-w-56">{contact.section.text}</p>
+              <p className="font-bold">{contact.section.intro}</p>
+              <p className="max-w-56 font-light">{contact.section.text}</p>
             </div>
             <button
               type="button"
