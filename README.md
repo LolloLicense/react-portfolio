@@ -27,15 +27,15 @@ The portfolio is a responsive single-page application built from my own Figma de
 - Light and dark themes
 - Interactive Lollo-Bingo
 - Contact form with validation and Formspree integration
-- Interactive CV
-- Responsive layouts for mobile and desktop
+- CV presented in an animated modal
+- Responsive layouts for mobile, tablet and desktop
 - UI animations using Motion
 
 ## Design
 
 The portfolio was designed in Figma for both desktop and mobile before development.
 
-The final implementation stays close to the original Figma design. During development, I made smaller adjustments to image sizes, spacing and hover states to improve responsiveness and interaction in the browser.
+The final implementation stays close to the original Figma design. During development, I made smaller adjustments to image sizes, spacing, colors and hover states to improve responsiveness and interaction in the browser.
 
 The contact section was added during the design process and was also incorporated into the final Figma design.
 
