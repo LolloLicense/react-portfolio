@@ -14,8 +14,12 @@ function CustomCursor() {
 
   // Tracks if the pointer is being held down
   const isPointerDown = useRef(false);
+  // Not active on touchscreen devices
+  const hasFinePointer = window.matchMedia('(any-pointer: fine)').matches;
 
   useEffect(() => {
+    if (!hasFinePointer) return;
+
     const interactiveSelector =
       "a, button, input, textarea, select, [role='button']";
 
@@ -120,7 +124,11 @@ function CustomCursor() {
 
       cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [hasFinePointer]);
+
+  if (!hasFinePointer) {
+    return null;
+  }
 
   return (
     <>

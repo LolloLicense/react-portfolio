@@ -11,7 +11,7 @@ type cvModalProps = {
 function CvModal({ cv, onClose, onContactClick }: cvModalProps) {
   return (
     <motion.div
-      className='fixed inset-0 z-40 overflow-y-auto'
+      className='fixed inset-0 z-40 overflow-y-auto bg-background'
       initial={{ x: '100%' }}
       animate={{ x: 0 }}
       exit={{ x: '100%' }}

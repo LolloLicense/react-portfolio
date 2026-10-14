@@ -19,9 +19,9 @@ function Hero({ onCvClick }: HeroProps) {
           type='button'
           onClick={onCvClick}
           aria-label='Öppna CV'
-          className='w-14 h-14 shrink-0 bg-blue rounded-full flex items-center justify-center text-light hover:bg-orange'
+          className='w-8 h-8 md:w-14 md:h-14 shrink-0 bg-blue rounded-full flex items-center justify-center text-light hover:bg-orange'
         >
-          <CvIcon className='w-4 h-4 rotate-45' />
+          <CvIcon className='w-3 h-3 md:w-4 md:h-4 rotate-45' />
         </button>
       </div>
     </section>

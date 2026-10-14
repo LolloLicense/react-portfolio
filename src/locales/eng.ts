@@ -107,7 +107,7 @@ export const eng = {
     subject: 'Vibe?',
     subjects: {
       business: 'Workstuff',
-      plotTwist: 'Randome',
+      plotTwist: 'Random',
     },
 
     placeholders: {
