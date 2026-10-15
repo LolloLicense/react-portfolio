@@ -163,7 +163,7 @@ h6 {
 }
 
 .skills-scroll-left {
-  animation: skills-scroll-left 60s linear infinite;
+  animation: skills-scroll-left 100s linear infinite;
 }
 
 @keyframes skills-scroll-right {
@@ -177,5 +177,5 @@ h6 {
 }
 
 .skills-scroll-right {
-  animation: skills-scroll-right 60s linear infinite;
+  animation: skills-scroll-right 100s linear infinite;
 }

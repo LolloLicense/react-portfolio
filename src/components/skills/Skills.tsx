@@ -30,6 +30,7 @@ const skillsRow1 = [
   { name: 'Figma', icon: SiFigma },
   { name: 'UX/UI', icon: LuComputer },
 ];
+
 const skillsRow2 = [
   { name: 'REST API', icon: TbApi },
   { name: 'Node.js', icon: SiNodedotjs },
@@ -43,6 +44,9 @@ const skillsRow2 = [
   { name: 'SEO', icon: RiSeoLine },
 ];
 
+const row1Loop = [...skillsRow1, ...skillsRow1];
+const row2Loop = [...skillsRow2, ...skillsRow2];
+
 function Skills() {
   return (
     <section
@@ -53,14 +57,17 @@ function Skills() {
         <h2 className='uppercase text-h2 md:[writing-mode:vertical-rl] leading-none whitespace-nowrap text-foreground'>
           Skills
         </h2>
+
         <div className='flex flex-col gap-4 flex-1 min-w-0 overflow-hidden'>
+          {/* ROW 1 */}
           <div className='flex w-max skills-scroll-left'>
             <div className='flex gap-4 pr-4'>
-              {skillsRow1.map((skill) => {
+              {row1Loop.map((skill, index) => {
                 const Icon = skill.icon;
+
                 return (
                   <div
-                    key={skill.name}
+                    key={`${skill.name}-${index}`}
                     className='flex flex-col items-center justify-center gap-2 w-28 h-28 md:w-30 md:h-36 lg:w-36 lg:h-36 shrink-0'
                   >
                     <Icon
@@ -74,12 +81,15 @@ function Skills() {
                 );
               })}
             </div>
+
+            {/* Duplicate for seamless loop */}
             <div className='flex gap-4 pr-4' aria-hidden='true'>
-              {skillsRow1.map((skill) => {
+              {row1Loop.map((skill, index) => {
                 const Icon = skill.icon;
+
                 return (
                   <div
-                    key={`duplicate-${skill.name}`}
+                    key={`duplicate-${skill.name}-${index}`}
                     className='flex flex-col items-center justify-center gap-2 w-28 h-28 md:w-30 md:h-36 lg:w-36 lg:h-36 shrink-0'
                   >
                     <Icon
@@ -94,13 +104,16 @@ function Skills() {
               })}
             </div>
           </div>
+
+          {/* ROW 2 */}
           <div className='flex w-max skills-scroll-right'>
             <div className='flex gap-4 pr-4'>
-              {skillsRow2.map((skill) => {
+              {row2Loop.map((skill, index) => {
                 const Icon = skill.icon;
+
                 return (
                   <div
-                    key={skill.name}
+                    key={`${skill.name}-${index}`}
                     className='flex flex-col items-center justify-center gap-2 w-28 h-28 md:p-6 md:w-30 md:h-36 lg:w-36 lg:h-36 shrink-0'
                   >
                     <Icon aria-hidden='true' className='text-6xl' />
@@ -111,12 +124,15 @@ function Skills() {
                 );
               })}
             </div>
+
+            {/* Duplicate for seamless loop */}
             <div className='flex gap-4 pr-4' aria-hidden='true'>
-              {skillsRow2.map((skill) => {
+              {row2Loop.map((skill, index) => {
                 const Icon = skill.icon;
+
                 return (
                   <div
-                    key={`duplicate-${skill.name}`}
+                    key={`duplicate-${skill.name}-${index}`}
                     className='flex flex-col items-center justify-center gap-2 w-28 h-28 md:p-6 md:w-30 md:h-36 lg:w-36 lg:h-36 shrink-0'
                   >
                     <Icon aria-hidden='true' className='text-6xl' />
